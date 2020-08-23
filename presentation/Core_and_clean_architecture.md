@@ -13,7 +13,7 @@ Modern .NET Core and clean architecture
 
 ---
 
-# About speaker
+# About me
 
 ```java
 //Sergei Gladyshev
@@ -30,23 +30,31 @@ public void Foo(){
 - Disclaimer
 - TDD, DDD, and ETC...
 - Onion architecture
-- Medator and MediatR, SQRC
+- Let's code
+- Medator and MediatR, CQRC
 - Let's code
 - Links to materials
 ---
 # Disclamer
-Часть информации в этом докладе неверная с т.з. академических трудов по архитектуре и пр. 
+    Часть информации в этом докладе спорная с т.з. академических трудов по архитектуре и пр. 
 
-Целью доклада было провести краткое погружение в технологии и подходы, которые используются в разработке приложений на net core
+    Целью доклада было провести краткое погружение в технологии и подходы, которые используются в разработке приложений на net core
 
----
-![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/magnetron.png)
+<!-- ---
+
+![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/magnetron.png) -->
 
 ---
 # TDD
 ![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/TDD.png)
 
 ---
+# TDD
+- слабая связанность
+- разделение логики на слои
+- самоописывающий себя код
+---
+
 # DDD
 ![bg 50%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/DDD.png)
 
@@ -55,33 +63,31 @@ public void Foo(){
 # DDD
 - набор правил, которые позволяют принимать эффективные решения
 - основная цель - борьба со сложностью
-- ubiquitous language (Only What You Understand Can You Explain)
+- ubiquitous language (If you can't explain it simply, you don't understand it well enough)
 - bounded context
-- с т.з BDD не важно какую архитектуру вы выбререте, **НО**
+- с т.з BDD не важно какую архитектуру вы выбререте
 
 ---
 # DDD
 - почти невозможен без чистой архитектуры.
 - изменения функциональности должны сохранять кодовую базу чистой
 ---
-### Зачем DDD ?
-- код проекта хорошо читается всеми разработчиками, а иногда и аналитиками (ubiquitous language)
-- задачи становятся более ясными
-- весь проект целиком становится более устойчивым к изменению
-
----
 ## Clean Architecture
-domain - enterprise logic and types
-application - bussines logic and types
-application - specific for this system
-domain - specific for this domain
+- **Domain** all entities, enums, exceptions, interfaces, types and logic specific to the domain layer.
+- **Application** all application logic. Dependent only on the domain layer. defines interfaces that are implemented by outside layers. 
+
+- **Infrastructure** contains classes for accessing external resources such as file systems, web services, smtp, and so on.
+
+- **WebUI** SPA, based on Angular 9 and ASP.NET Core 3.1
 
 ---
-## Clean benefits
+## Clean Arc benefits
 
 - testable
-- independent
+- independent parts
+- future-proof
 ---
+
 ## Onion
 ![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/Onion.png)
 
@@ -91,18 +97,14 @@ domain - specific for this domain
 ![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/UseCases.png)
 
 ---
-# Domain
-- Entities
-- Logic
-- Exceptions
+#### Some words about tests
+
+![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/UnitTests.png)
+
 ---
-# Application Layer
-- Interfaces
-- Models
-- Logic
-- Commands/Queries
-- Validators
-- Exceptions
+ 
+ # let's look at the software
+ ![bg 60%]()
 
 ---
 # CQRS
@@ -115,8 +117,12 @@ domain - specific for this domain
 
 ---
 # MediatR
+
+![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/mediatr1.png)
+
 ---
 # MediatR
+![bg 90%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/mediatr2.png)
 
 ---
 # Mapping
