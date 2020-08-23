@@ -103,8 +103,12 @@ public void Foo(){
 
 ---
  
- # let's look at the software
- ![bg 60%]()
+ ## let's look at the software
+ ![bg 50%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/your_soft.png)
+
+---
+## Mediator? CQRS? 
+![bg 50%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/wtf.png)
 
 ---
 # CQRS
@@ -136,5 +140,7 @@ IMapFrom<>
 
 ---
 # Links
-- https://github.com/paucls/my-ddd-journey
+- [Огномная подборка статей про DDD](https://github.com/paucls/my-ddd-journey)
+- [Оригинальный репозиторий с шаблоном приложения](https://github.com/jasontaylordev/CleanArchitecture)
+- [Доклад Jason Taylor о его подходах к написанию софта](https://www.youtube.com/watch?v=dK4Yb6-LxAk)
 
