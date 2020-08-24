@@ -10,6 +10,37 @@ public async Task<ActionResult> Delete(int id)
     return NoContent();
 }
 ```
+### 2.1. Раскоментируем код фронтенд части:
+```Todo.Component.ts```
+```javascript
+if (!item.title.trim()) {
+    this.deleteItem(item);
+    return;
+}
+```
+```javascript
+// Delete item
+deleteItem(item: TodoItemDto) {
+    if (this.itemDetailsModalRef) {
+        this.itemDetailsModalRef.hide();
+    }
+
+    if (item.id == 0) {
+        let itemIndex = this.selectedList.items.indexOf(this.selectedItem);
+        this.selectedList.items.splice(itemIndex, 1);
+    } else {
+        this.itemsClient.delete(item.id).subscribe(
+            () => this.selectedList.items = this.selectedList.items.filter(t => t.id != item.id),
+            error => console.error(error)
+        );
+    }
+}
+```
+
+и в файле  `Todo.Component.html`
+```html
+<button class="btn btn-default text-danger" (click)="deleteItem(selectedItem)">Delete</button>
+```
 
 ### 2. На слое application создадим каталог для нужного нам юзкейса.
 - Назовем его `DeleteTodoItem`
@@ -177,8 +208,7 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
 ### 6. Зарегистрируем пайплайн в пакете с инджекциями
 ```CleanArchitecture.Application```
 
-```services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));```
-
-
-
+```java
+    services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+```
 
