@@ -129,6 +129,10 @@ public void Foo(){
 ![bg 90%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/mediatr2.png)
 
 ---
+## Библиотеки проекта
+- [Библиотека для понятного представления ошибок в тестах](https://fluentassertions.com/about/)
+
+
 # Mapping
 IMapFrom<>
 ---
