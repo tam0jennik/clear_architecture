@@ -40,10 +40,6 @@ public void Foo(){
 
     Целью доклада было провести краткое погружение в технологии и подходы, которые используются в разработке приложений на net core
 
-<!-- ---
-
-![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/magnetron.png) -->
-
 ---
 # TDD
 ![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/TDD.png)
@@ -83,9 +79,9 @@ public void Foo(){
 ---
 ## Clean Arc benefits
 
-- testable
-- independent parts
-- future-proof
+- Testable
+- Independent parts
+- Future-proof
 ---
 
 ## Onion
@@ -112,12 +108,12 @@ public void Foo(){
 
 ---
 # CQRS
-![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/sqrs1.png)
+![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/cqrs1.png)
 
 ---
 
 # CQRS
-![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/sqrs2.png)
+![bg 60%](https://raw.githubusercontent.com/tam0jennik/clear_architecture/master/presentation/img/cqrs2.png)
 
 ---
 # MediatR
@@ -131,20 +127,11 @@ public void Foo(){
 ---
 ## Библиотеки проекта
 - [Библиотека для понятного представления ошибок в тестах](https://fluentassertions.com/about/)
-
-
-# Mapping
-IMapFrom<>
----
-# Validation
----
-# Unit of work and Repository
-тут нужна картинка
-и ключевые описания
-
+- [Automapper](https://automapper.org/)
+- [Fluetn validation](https://fluentvalidation.net/)
 ---
 # Links
-- [Огномная подборка статей про DDD](https://github.com/paucls/my-ddd-journey)
+- [Подборка статей про DDD](https://github.com/paucls/my-ddd-journey)
 - [Оригинальный репозиторий с шаблоном приложения](https://github.com/jasontaylordev/CleanArchitecture)
 - [Доклад Jason Taylor о его подходах к написанию софта](https://www.youtube.com/watch?v=dK4Yb6-LxAk)
 
